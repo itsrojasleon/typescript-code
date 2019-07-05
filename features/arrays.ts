@@ -15,3 +15,6 @@ carMakers.map(
     return car;
   }
 );
+
+//
+const importantDates: (Date | string)[] = [new Date(), '16-10-12'];
