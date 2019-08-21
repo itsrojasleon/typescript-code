@@ -7,6 +7,7 @@ var fs_1 = __importDefault(require("fs"));
 var CsvFileReader = /** @class */ (function () {
     function CsvFileReader(filename) {
         this.filename = filename;
+        this.data = [];
     }
     CsvFileReader.prototype.read = function () {
         this.data = fs_1.default
@@ -16,7 +17,8 @@ var CsvFileReader = /** @class */ (function () {
             .split('\n')
             .map(function (row) {
             return row.split(',');
-        });
+        })
+            .map(this.mapRow);
     };
     return CsvFileReader;
 }());
