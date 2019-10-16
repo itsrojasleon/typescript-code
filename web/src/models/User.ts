@@ -1,4 +1,4 @@
-import { Model } from './Modal';
+import { Model } from './Model';
 import { Attributes } from './Attributes';
 import { ApiSync } from './ApiSync';
 import { Eventing } from './Eventing';
@@ -17,8 +17,6 @@ export class User extends Model<UserProps> {
       new Attributes<UserProps>(attrs),
       new Eventing(),
       new ApiSync<UserProps>(rootUrl)
-    )
+    );
   }
 }
-
-const user = User.buildUser({});
