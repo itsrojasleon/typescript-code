@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+import { Methods } from './Methods';
 
 function routerBinder(method: string) {
   return function(path: string) {
@@ -9,8 +10,8 @@ function routerBinder(method: string) {
   };
 }
 
-export const get = routerBinder('get');
-export const put = routerBinder('put');
-export const post = routerBinder('post');
-export const del = routerBinder('del');
-export const patch = routerBinder('patch');
+export const get = routerBinder(Methods.get);
+export const put = routerBinder(Methods.put);
+export const post = routerBinder(Methods.post);
+export const del = routerBinder(Methods.del);
+export const patch = routerBinder(Methods.patch);
