@@ -5,7 +5,7 @@
   "author": "Juan Luis Rojas León",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "ts-node": "^8.3.0"
   }
 }
